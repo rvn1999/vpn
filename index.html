@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<title>
+VPN Availability
+</title>
+<body>
+<h1> VPN Connection </h1>
+<h2 id="u"> </h2>
+<Button onclick="func()"> TRY </button>
+<script src='require.js'></script>
+<script>
+ var user;
+ var fs=require('fs');
+ function func(){
+	user=prompt("Name");
+	fs.writeFileSync('out.txt',user);
+	document.getElementById("u").innerHTML = user;
+ }
+</script>
+</body>
+</html>
